@@ -17,11 +17,12 @@ class Arrow extends Component {
         } else {
             document.getElementById(this.id).classList.add('arrow-closed');
         }
+
         this.setState({ status: !this.state.status })
     }.bind(this);
 
     render() {
-        this.id=`arrow-${this.props.id}`
+        this.id = `arrow-${this.props.id}`
         return (
             <a id={this.id} onClick={() => this.toggleArrow()}className={`${this.props.className} arrow`}></a>
         )
